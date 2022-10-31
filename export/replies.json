@@ -1,0 +1,22 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Micro.blog - Replies",
+  "home_page_url": "https://micro.blog/",
+  "feed_url": "https://micro.blog/account/export/replies",
+  "_microblog": {
+    "about": "https://micro.blog/about/api",
+    "id": "144039",
+    "username": "dieselgoth",
+    "bio": "Software Historian",
+    "is_following": true,
+    "is_you": true
+  },
+  "author": {
+    "name": "David Blue",
+    "url": "https://dieselgoth.micro.blog/",
+    "avatar": "https://avatars.micro.blog/avatars/2022/144039.jpg"
+  },
+  "items": [
+
+  ]
+}
