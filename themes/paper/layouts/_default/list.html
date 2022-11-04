@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<!-- $pages -->
+{{ $pages := union .RegularPages .Sections }}
+<!---->{{ if .IsHome }} {{ $pages = where site.RegularPages "Type" "post" }}
+{{ end }}
+
+<!-- Articles -->
+{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages }}
+  {{ if .Site.Params.full_content_on_homepage }}
+    <article class="post-entry-content">
+      {{ if .Title }}
+        <h2>{{ .Title }}</h2>
+      {{ end }}
+      <time><a href="{{ .Permalink }}">{{ .Date | time.Format ":date_medium" }} ⌘</a></time>
+      <section class="post-content">{{ .Content }}</section>
+    </article>
+    <hr class="post-separator">
+  {{ else }}
+    <article class="post-entry">
+      {{ if .Title }}
+        <h2>{{ .Title }}</h2>
+      {{ end }}
+      <time>{{ .Date | time.Format ":date_medium" }}</time>
+      <p>{{ .Summary | truncate 300 }}</p>
+      <a href="{{ .Permalink }}"></a>
+    </article>
+  {{ end }}
+{{ end }}
+
+<!-- Main Nav -->
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="main-nav">
+  {{ if $paginator.HasPrev }}
+  <a class="prev" href="{{ $paginator.Prev.URL }}">← Prev Page</a>
+  {{ end }}<!---->
+  {{ if $paginator.HasNext }}
+  <a class="next" href="{{ $paginator.Next.URL }}">Next Page →</a>
+  {{ end }}
+</nav>
+{{ end }}<!---->
+
+{{ end }}

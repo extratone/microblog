@@ -1,0 +1,47 @@
+{
+	"version": "1.1.4",
+	"title": "Paper theme",
+	"description": "A simple, clean, flexible Hugo theme, customized for Micro.blog.",
+	"fields": [
+		{
+			"field": "params.twitter",
+			"label": "Twitter",
+			"placeholder": "Your Twitter username"
+		},
+		{
+			"field": "params.github",
+			"label": "GitHub",
+			"placeholder": "Your GitHub username"
+		},
+		{
+			"field": "params.instagram",
+			"label": "Instagram",
+			"placeholder": "Your Instagram username"
+		},
+		{
+			"field": "params.microdotblog",
+			"label": "Micro.blog",
+			"placeholder": "Your Micro.blog username"
+		},
+		{
+			"field": "params.buymeacoffee",
+			"label": "Buy Me a Coffee",
+			"placeholder": "Your Buy Me a Coffee username"
+		},
+		{
+			"field": "params.favicon",
+			"label": "Favicon Path",
+			"placeholder": "Path to the favicon to be used"
+		},
+		{
+			"field": "params.hide_categories_on_archive",
+			"label": "Hide category list on Archive page",
+			"type": "boolean"
+		},
+		{
+			"field": "params.full_content_on_homepage",
+			"label": "Display full post content on Homepage",
+			"type": "boolean"
+		}
+	]	
+}
