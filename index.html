@@ -24,6 +24,141 @@
 	
 	  <div class="h-entry">
 		
+			<h1><a href="https://www.davidblue.bio/2022/12/11/ashell.html">a-Shell 1.1</a></h1>
+		
+
+		<a href="https://www.davidblue.bio/2022/12/11/ashell.html" class="u-url"><time class="dt-published" datetime="2022-12-11 10:15:35 -0600">Dec 11, 2022</time></a>
+
+		<div class="e-content">
+			 <p><img src="https://www.davidblue.bio/uploads/2022/c963ec2790.png" alt=""></p>
+<p>From yesterday&rsquo;s update to <a href="https://apps.apple.com/us/app/a-shell/id1473805438" title="a-Shell on the App Store"><strong>a-Shell</strong></a> (1.10):</p>
+<ul>
+<li>new toolbar option for iPads, using iOS styling (you can switch to it using Settings).</li>
+<li>updated Python to version 3.11, Vim to version 8.2</li>
+<li>Vim works with Scribble (character recognition using Apple pencil)</li>
+<li>options to customize cursor shape (<code>config -k</code>)</li>
+<li>new command: <code>multimarkdown</code>, to convert Markdown files to other formats (including Tex)</li>
+<li>keyboard commands to change the font size: <code>⌘+</code>, <code>⌘-</code> (and <code>^+</code> / <code>^-</code> too)</li>
+<li>new option (in Settings) to not restore windows content when the app restarts.</li>
+<li>many bug fixes: long scrolling does not reset to the beginning randomly, font size remains the same when going to the background, the app keeps keyboard focus, Vim plugins can execute dash commands&hellip;</li>
+</ul>
+<p>Continuing on my (admittedly somewhat counter-intuitive) bent of making non-command-line utilities/configurables <em>specifically for terminal emulators</em>, I rewrote <a href="https://gist.github.com/extratone/3dc1b090622bb56b49976351f0741b5d" title="a-Shell Appearance Gist">my personal a-Shell &ldquo;theme&rdquo;</a> from scratch, taking inspiration from Things 3&rsquo;s colors yet again.</p>
+<p><code>config -s 19 -n Fira\ Mono -b #16191E -f #999999 -c #D8BE40 -k beam -p</code></p>
+<ul>
+<li><code>-s 19</code> sets the default font display size to 19px.</li>
+<li><code>-n Fira\ Mono</code> requires that you have <a href="https://fonts.google.com/specimen/Fira+Mono" title="Fira Mono - Google Fonts">Fira Mono</a> installed<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, but it specifies the display font.</li>
+<li><code>-b #16191E</code> sets the background behind the text to <a href="https://colornames.org/color/16191e" title="Midnight Car Ride At 2am - Colornames"><em>Midnight Car Ride At 2am</em></a>.</li>
+<li><code>-f #999999</code> sets the primary text color to <a href="https://colornames.org/color/999999" title="Million Grey - Colornames"><em>Million Grey</em></a>.</li>
+<li><code>-c #D8BE40</code> sets the cursor and text highlight colors to <a href="https://colornames.org/color/d8be40" title="Agate Swirl - Colornames"><em>Agate Swirl</em></a>.</li>
+<li><code>-k beam</code> uses the new option, <code>cursorShape</code> to pick between <code>beam</code>, <code>block</code>, and <code>underline</code>.</li>
+<li><code>-p</code> saves the configuration permanently!</li>
+</ul>
+<p>Since I&rsquo;ve gotten this far, it also occurred to me that I could whip up a very simple <a href="https://www.icloud.com/shortcuts/bb21eb01364c43e5a302424ee819b839" title="Davod's a-Shell Theme Shortcut"><strong>Siri Shortcut</strong></a> which will pull any ongoing modifications to this look from its gist and install them on your system with a single tap.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Before, I stopped trying to figure out how to specify fonts by name with this command, relying instead on <code>config -n picker</code> to use the native system font picker to do so. It wasn&rsquo;t until today that I realized I could use <code>config --show</code> to display font names in the syntax a-Shell understands.</p>
+<p>(Guess what that syntax looks like? lol)&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://www.davidblue.bio/2022/12/09/twooo-black.html">Twooo Black</a></h1>
+		
+
+		<a href="https://www.davidblue.bio/2022/12/09/twooo-black.html" class="u-url"><time class="dt-published" datetime="2022-12-09 06:31:39 -0600">Dec 9, 2022</time></a>
+
+		<div class="e-content">
+			 <p><img src="https://www.davidblue.bio/uploads/2022/666e5817c7.png" alt=""></p>
+<h2 id="whatever-liquid-retina-display-does-or-doesnt-mean-this-sure-is-a-dark-screen">Whatever &ldquo;Liquid Retina Display&rdquo; does or doesn&rsquo;t mean, this sure is a dark screen.</h2>
+<p>In case you&rsquo;ve somehow just stumbled upon this post, you should know that I&rsquo;ve spent all of 2022 to date using a 12.9&quot; (M1) iPad Pro as my primary computing device after having involuntary come into possessing it and realizing that - despite a lifetime of nothing but vitriol for the entire product line&rsquo;s premise - the brutality of the machinery&rsquo;s athleticism<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> (even if it had no meaning outside of Geekbench.com) justified a Good College Try, at the very least. I <em>am</em> still going, yes, and I have absolutely no clue as to whether or not my own volition is still involved. Maybe one day, I&rsquo;ll elaborate in an original, insightful, and legitimately compelling Post.</p>
+<p>Perhaps I <em>can</em> actually remark on this particular element of <em>The iPad Professional Lyfestyle</em> experience with the pitiful realization that the the display&rsquo;s surprisingly long-lived ability to bewitch might as well be regarded as the device&rsquo;s singular genuinely-impressive bit as far as I can tell.</p>
+<p>As always, what Federico Viticci had to say on the subject is vastly more informed, useful, and insightful, so I&rsquo;m going to include a right old chunk of <strong>[his exceptional review of the M1 iPad Pro](<a href="https://www.macstories.net/stories/ipad-pro-2021-review/">https://www.macstories.net/stories/ipad-pro-2021-review/</a> &ldquo;&ldquo;iPad Pro 2021 Review - Future on Standby&rdquo;&quot;)</strong> from last year at the bottom of this Post, after I take care of just one more thing.</p>
+<p><img src="https://www.davidblue.bio/uploads/2022/3d3a646bb7.png" alt="I was so mesmerized by the glow from Blink Shell the first time I tried using this device in a truly dark environment that I was compelled to try to capture it in a photograph. This is the best one I got after like 45 minutes of fiddling lmao."></p>
+<p>Basically, - after what feels like a lifetime living in deep satisfaction with what I&rsquo;d been turning up in the way of <a href="https://davidblue.wtf/wallpaper" title="My shared iCloud Photos album for wallpapers.">dark mode device wallpaper</a> - it finally occurred to me that I could whip up <strong>[a &ldquo;pure black&rdquo; image](<a href="https://davidblue.wtf/walls/black.png">https://davidblue.wtf/walls/black.png</a> &ldquo;&ldquo;Pure Black&rdquo; Wallpaper Image&rdquo;)</strong> in no time at all and boy, I can&rsquo;t tell you glad I am that I decided to give it a try.</p>
+<p><img src="https://www.davidblue.bio/uploads/2022/8621e8d6a6.png" alt="" title="Amanda Homescreens, 12092022-053657"></p>
+<p>&hellip;and I&rsquo;ve been operating this way most of the time for several months, now!</p>
+<p>Since you&rsquo;re here - and perhaps do not spend your free time fiddling with absurdly mismaintained personal automation software - I thought I might share <a href="https://www.icloud.com/shortcuts/c967e358b5374575994e2b371bd759c6" title="TrueBlackWallpaper Siri Shortcut">the very Siri Shortcut I use</a> to set said image as my system wallpaper and set the system appearance to <code>Dark</code> with a single tap/click.</p>
+<p><img src="https://www.davidblue.bio/uploads/2022/c1a9777864.png" alt=""></p>
+<p><strong><a href="https://www.icloud.com/shortcuts/c967e358b5374575994e2b371bd759c6" title="TrueBlackWallpaper Siri Shortcut">TrueBlackWallpaper</a></strong> does indeed download the image every single time it&rsquo;s run but - as I said, it&rsquo;s quite frugal in size.</p>
+<hr>
+<blockquote>
+<p>The new iPad Pro’s Liquid Retina XDR display is, by far, the best display I’ve ever seen in a portable computer. It puts the iPad Pro’s old (and still pretty good) Liquid Retina Display to shame thanks to its higher brightness (1000 nits of full-screen brightness compared to 600 in the last-gen model), more vibrant colors, highlights that pop out a lot more, and black levels that almost rival the performance of “pure black” on OLED displays.</p>
+</blockquote>
+<blockquote>
+<p>This display was pitched as a great way for creators of HDR content to take their workflows on the go as well as a superior experience for consumers of HDR content such as movies and TV shows from Apple TV+ and Netflix or photos taken with Smart HDR on iPhone. After a week of testing, I think that message makes sense: if you’re a videographer or photographer, you’ll instantly see and understand the impact of wider color reproduction; if you’re a “regular” iPad user who doesn’t work in those fields, you won’t see the effects of the XDR display in the UI of Apple Mail or Files, but you’ll “get it”, just like I did, as soon as you watch HDR content, play a game, or browse your photo library.</p>
+</blockquote>
+<blockquote>
+<p>There’s some fascinating tech that makes the Liquid Retina XDR display’s high-brightness and high-contrast performance possible. The display comes with 10,000 mini-LEDs compared to the previous iPad Pro’s 72 LEDs; the new mini-LED technology employed by Apple is 120 times smaller than the previous display’s design. Additionally, all those mini-LEDs have been grouped into 2596 local dimming zones; the idea is that each zone can control the brightness of its mini-LEDs and precisely adjust it depending on the content displayed onscreen, which explains why video content shot in high-dynamic range features, well, a wider range of colors and brightness levels across the entire 12.9” panel.</p>
+</blockquote>
+<blockquote>
+<p>In case the quality of this display hasn’t come across from this description yet, consider this additional context:</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>The Pro Display XDR <a href="https://twitter.com/ismh/status/1384592995089936384">features 576 local dimming zones</a> (compared to the iPad Pro’s 2596) for $4,999;</li>
+</ul>
+</blockquote>
+<ul>
+<li>The iPad Pro fully matches the Pro Display XDR’s sustained brightness performance (1000 nits) as well as its peak brightness (1600 nits) when watching HDR content;</li>
+<li>The iPhone 12 Pro’s OLED display can deliver up to 800 nits with full-screen brightness and maxes out at 1200 nits for peak brightness;</li>
+<li>The new 24” iMac supports P3 wide color and True Tone, but maxes out at 500 nits.</li>
+</ul>
+<blockquote>
+<p>Thus, a good way to think about the new Liquid Retina XDR display is the following: Apple was able to take some of the high-end technology that powered the Pro Display XDR, shrink it down to a 12.9” display, and even improve it thanks to mini-LED, going from 576 dimming zones to 2596 – a whopping 350% increase for a multitouch tablet you can hold in your hands. Obviously, unlike the Pro Display XDR, the Liquid Retina XDR display isn’t considered a reference monitor with support for advanced features such as <a href="https://support.apple.com/en-us/HT210804">manual calibration</a>; however, for a product starting at $1099, bringing extreme dynamic range to the “prosumer” market is quite the achievement, and a substantial leap from the older Liquid Retina display.</p>
+</blockquote>
+<blockquote>
+<p>At this point, you might wonder: all this sounds impressive, but do you <em>actually</em> notice these fancy display improvements in everyday usage? The answer is nuanced, but after a week with the new iPad Pro, I think there are some common scenarios in which everyone will immediately see the difference between the old Liquid Retina Display and the new Liquid Retina XDR.</p>
+</blockquote>
+<blockquote>
+<p>The first, must-try test is iPadOS’ dark mode or any kind of image/video featuring dark areas: on the Liquid Retina XDR display, black levels approach the “true black” quality of the iPhone’s OLED display; a pure black color displayed on the Liquid Retina XDR is deep and nearly indistinguishable from the iPad Pro’s black bezels. I say “nearly” because, due to the nature of OLED, only the iPhone’s display can achieve real “true black” and turn off pixels displaying the color black. I tested this by comparing the iPad Pro and iPhone 12 Pro Max with a pure black JPEG image displayed in full-screen: upon closer inspection, I could barely make out the display from the bezels on the new iPad Pro, but I couldn’t on the iPhone’s OLED display.</p>
+</blockquote>
+<blockquote>
+<p>So while, technically speaking, the Liquid Retina XDR’s black color reproduction isn’t “true black”, it gets dramatically close to that goal. I would even say that, because you typically hold an iPad further away from your eyes, ultimately this difference doesn’t matter: to my eyes, it <em>feels</em> like the Liquid Retina XDR supports true black, which has an incredible effect on using apps with true-black dark modes on the new iPad Pro. Contrast between black UI elements and white text is higher than before, and there’s also better separation between black sidebars and other dark gray or dark blue UI elements such as lists and popovers. I never used dark mode extensively on iPad because I preferred the way it looked on the iPhone’s OLED display; I’m going to reconsider now thanks to the Liquid Retina XDR’s fantastic black levels.</p>
+</blockquote>
+<blockquote>
+<p>Comparing black levels between the old iPad Pro and the new one makes the 2020 model look blissfully ignorant of what the color ‘black’ actually is or what it’s supposed to look like. Check out the photo below, which shows the same black image displayed on a 2020 iPad Pro and the 2021 model at max brightness in a dark room with Night Mode <em>disabled</em>…</p>
+</blockquote>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>As in, the 1TB (iPad13,9)&rsquo;s hardware specifications equated to all of my household&rsquo;s computers, combined.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://www.davidblue.bio/2022/12/07/201334.html">iPadOS 16.2 Release Candidate Benchmarks</a></h1>
+		
+
+		<a href="https://www.davidblue.bio/2022/12/07/201334.html" class="u-url"><time class="dt-published" datetime="2022-12-07 20:13:34 -0600">Dec 7, 2022</time></a>
+
+		<div class="e-content">
+			 <p>Geekbench 5 benchmarks from my M1 iPad Pro (iPad13,9) running the iPadOS 16.2 Release Candidate build.</p>
+<ul>
+<li><a href="https://browser.geekbench.com/v5/cpu/19154440">CPU</a></li>
+<li><a href="https://browser.geekbench.com/v5/compute/6030365">Compute</a></li>
+<li><a href="https://browser.geekbench.com/ml/v0/inference/215542">CoreML</a></li>
+</ul>
+<hr>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
 
 		<a href="https://www.davidblue.bio/2022/12/01/offbearing-offtask.html" class="u-url"><time class="dt-published" datetime="2022-12-01 12:23:28 -0600">Dec 1, 2022</time></a>
 
