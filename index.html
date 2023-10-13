@@ -24,6 +24,166 @@
 	
 	  <div class="h-entry">
 		
+			<h1><a href="https://extratone.blog/2023/10/13/clippings-backup-taio.html">Clippings Backup Taio Action</a></h1>
+		
+
+		<a href="https://extratone.blog/2023/10/13/clippings-backup-taio.html" class="u-url"><time class="dt-published" datetime="2023-10-13 00:07:49 -0500">Oct 13, 2023</time></a>
+
+		<div class="e-content">
+			 <p><img src="https://extratone.blog/uploads/2023/image-10-12-23-23-58.png" alt="Clippings Backup action open in the Taio Action Editor."></p>
+<ul>
+<li><a href="https://github.com/extratone/taio/issues/23" title="Clippings Backup - #23 - Taio Repo"><strong>GitHub Issue</strong></a></li>
+<li><a href="taio://actions?action=run&amp;name=Clippings%20Backup">URL Scheme</a> - <code>taio://actions?action=run&amp;name=Clippings%20Backup</code></li>
+<li><a href="https://davidblue.wtf/taio/clippingsbackup/ClippingsBackup.taioactions">WTF</a></li>
+</ul>
+<p>This action uses the <a href="https://docs.taio.app/#/integration/shortcuts?id=get-clippings" title="Get Clippings Action Step Documentation">Get Clippings action step</a> to return the content of all clippings, which is then counted by lines and backed up (by default) in the root of one&rsquo;s iCloud Drive storage for Taio as <code>clippings.md</code>. (<code>iCloud Drive/Taio/Editor/clippings.md</code>) Before finishing, the action displays the number of lines it has backed up.</p>
+<h2 id="video-demo">Video Demo</h2>
+<!-- raw HTML omitted -->
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://github.com/extratone/taio/blob/main/actions/ClippingsBackup.taioactions">GitHub</a></li>
+<li><a href="https://www.pastery.net/geunbs">Pastery</a></li>
+<li><a href="https://davidblue.wtf/taio/clippingsbackup/clippingsbackup.json">WTF</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+	<span style="color:#f92672">&#34;actions&#34;</span>: [
+		{
+			<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;@clips.get-text&#34;</span>,
+			<span style="color:#f92672">&#34;parameters&#34;</span>: {
+				<span style="color:#f92672">&#34;mode&#34;</span>: <span style="color:#ae81ff">1</span>
+			}
+		},
+		{
+			<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;@flow.set-variable&#34;</span>,
+			<span style="color:#f92672">&#34;parameters&#34;</span>: {
+				<span style="color:#f92672">&#34;value&#34;</span>: {
+					<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;$&#34;</span>,
+					<span style="color:#f92672">&#34;tokens&#34;</span>: [
+						{
+							<span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#ae81ff">0</span>,
+							<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;@input&#34;</span>
+						}
+					]
+				},
+				<span style="color:#f92672">&#34;name&#34;</span>: {
+					<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;clippings&#34;</span>
+				}
+			}
+		},
+		{
+			<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;@text.count&#34;</span>,
+			<span style="color:#f92672">&#34;parameters&#34;</span>: {
+				<span style="color:#f92672">&#34;mode&#34;</span>: <span style="color:#ae81ff">0</span>,
+				<span style="color:#f92672">&#34;text&#34;</span>: {
+					<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;$&#34;</span>,
+					<span style="color:#f92672">&#34;tokens&#34;</span>: [
+						{
+							<span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#ae81ff">0</span>,
+							<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;clippings&#34;</span>
+						}
+					]
+				}
+			}
+		},
+		{
+			<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;@flow.set-variable&#34;</span>,
+			<span style="color:#f92672">&#34;parameters&#34;</span>: {
+				<span style="color:#f92672">&#34;value&#34;</span>: {
+					<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;$&#34;</span>,
+					<span style="color:#f92672">&#34;tokens&#34;</span>: [
+						{
+							<span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#ae81ff">0</span>,
+							<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;@input&#34;</span>
+						}
+					]
+				},
+				<span style="color:#f92672">&#34;name&#34;</span>: {
+					<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;count&#34;</span>
+				}
+			}
+		},
+		{
+			<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;@editor.new&#34;</span>,
+			<span style="color:#f92672">&#34;parameters&#34;</span>: {
+				<span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#ae81ff">2</span>,
+				<span style="color:#f92672">&#34;openInEditor&#34;</span>: <span style="color:#66d9ef">false</span>,
+				<span style="color:#f92672">&#34;filename&#34;</span>: {
+					<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;clippings.md&#34;</span>
+				},
+				<span style="color:#f92672">&#34;text&#34;</span>: {
+					<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;$&#34;</span>,
+					<span style="color:#f92672">&#34;tokens&#34;</span>: [
+						{
+							<span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#ae81ff">0</span>,
+							<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;clippings&#34;</span>
+						}
+					]
+				},
+				<span style="color:#f92672">&#34;overwriteIfExists&#34;</span>: <span style="color:#66d9ef">true</span>
+			}
+		},
+		{
+			<span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;@ui.toast&#34;</span>,
+			<span style="color:#f92672">&#34;parameters&#34;</span>: {
+				<span style="color:#f92672">&#34;style&#34;</span>: <span style="color:#ae81ff">0</span>,
+				<span style="color:#f92672">&#34;waitUntilDone&#34;</span>: <span style="color:#66d9ef">false</span>,
+				<span style="color:#f92672">&#34;title&#34;</span>: {
+					<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;$ Clippings Backed Up&#34;</span>,
+					<span style="color:#f92672">&#34;tokens&#34;</span>: [
+						{
+							<span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#ae81ff">0</span>,
+							<span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;count&#34;</span>
+						}
+					]
+				}
+			}
+		}
+	],
+	<span style="color:#f92672">&#34;buildVersion&#34;</span>: <span style="color:#ae81ff">1</span>,
+	<span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Clippings Backup&#34;</span>,
+	<span style="color:#f92672">&#34;clientMinVersion&#34;</span>: <span style="color:#ae81ff">1</span>,
+	<span style="color:#f92672">&#34;summary&#34;</span>: <span style="color:#e6db74">&#34;Backs up all clippings content - merged in a single text file - at [iCloud Storage]/clippings.md.&#34;</span>,
+	<span style="color:#f92672">&#34;icon&#34;</span>: {
+		<span style="color:#f92672">&#34;glyph&#34;</span>: <span style="color:#e6db74">&#34;externaldrive.badge.checkmark&#34;</span>,
+		<span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;#10ADC0&#34;</span>
+	},
+	<span style="color:#f92672">&#34;clientVersion&#34;</span>: <span style="color:#ae81ff">1222</span>
+}
+</code></pre></div>
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://extratone.blog/2023/09/29/open-in-roadstr.html">Open in RoadStr Siri Shortcut</a></h1>
+		
+
+		<a href="https://extratone.blog/2023/09/29/open-in-roadstr.html" class="u-url"><time class="dt-published" datetime="2023-09-29 13:45:53 -0500">Sep 29, 2023</time></a>
+
+		<div class="e-content">
+			 <h2 id="open-an-apple-maps-location-in-roadstr-from-the-share-sheet">Open an Apple Maps location in RoadStr from the share sheet.</h2>
+<p><a href="https://showcuts.app/share/view/b1275c7b79c64f00b9c111841d1750a8"><img src="https://cdn-images-1.medium.com/proxy/1*VKgjo6XlzCUJfGXomeQrbQ.png" alt="Open in RoadStr - Showcuts Dark"></a></p>
+<ul>
+<li><a href="https://github.com/extratone/i/issues/311">GitHub Issue</a></li>
+<li><a href="https://www.icloud.com/shortcuts/b1275c7b79c64f00b9c111841d1750a8">iCloud Share Link</a></li>
+<li><a href="https://showcuts.app/share/view/b1275c7b79c64f00b9c111841d1750a8">Showcuts</a></li>
+<li><a href="https://github.com/extratone/i/blob/main/shortcuts/OpeninRoadStr.shortcut">Source Repo File</a></li>
+</ul>
+<p>An extremely simple, but pointed Siri Shortcut for opening Apple Maps locations as waypoints in <a href="https://apps.apple.com/us/app/roadstr-car-app/id1382535778"><strong>RoadStr</strong></a>&rsquo;s map view, directly from the share sheet by constructing and then opening a URL in the following syntax:</p>
+<pre tabindex="0"><code>https://app.roadstr.io/custom?screen=map&amp;location={longitude,latitude}
+</code></pre><h2 id="video-demo">Video Demo</h2>
+<ul>
+<li><a href="https://github.com/extratone/i/assets/43663476/27246421-5c36-4cc4-a965-b4e3e54f11bd">Raw Video File</a></li>
+<li><a href="https://imgur.com/gallery/m2Hrkfh">Imgur</a></li>
+</ul>
+<!-- raw HTML omitted -->
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
 			<h1><a href="https://extratone.blog/2023/09/29/why-i-write.html">Why I Write About Technology — May 22nd, 2018</a></h1>
 		
 
